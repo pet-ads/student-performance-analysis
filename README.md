@@ -11,12 +11,12 @@ student-performance-analysis/
 │
 ├── README.md
 ├── data/
-│   ├── student-por.csv
+│   ├── student.csv
 │   └── prepare_data.py
 ├── notebooks/
 │   ├── Descriptive Analysis/
 │   │   ├── 01_Data_Loading_and_Cleaning.ipynb
-│   │   ├── 02_Exploratory_Data_Analysis.ipynb
+│   │   ├── -
 │   │   ├── -
 │   │   ├── -
 │   │   └── -
@@ -24,3 +24,6 @@ student-performance-analysis/
 │   │   ├── 01_Feature_Selection.ipynb
 │   │   ├── -
 │   │   └── -
+└── results/
+    ├── figures/
+    └── models/
