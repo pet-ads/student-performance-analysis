@@ -1,0 +1,15 @@
+# Análise inicial do dataset:
+Dataset composto por 395 linhas (estudantes) e 33 colunas. Dentre essas colunas, 17 representam dados categóricos e 16 representam dados numéricos.
+As colunas categóricas são majoritariamente binárias (sim/não, masculino/feminino) e outras são variáveis categóricas nominais (Mjob, Fjob, reason, guardian).
+As colunas numéricas são todas do tipo inteiro. Não há dados contínuos (float). A maioria dos dados é classificada como um dado numérico ordinal, como Medu - educação da mãe (0 - none, 1 - primary education (4th grade), 2 – 5th to 9th grade, 3 – secondary education or 4 – higher education), studytime - tempo de estudo por semana (numeric: 1 - <2 hours, 2 - 2 to 5 hours, 3 - 5 to 10 hours, or 4 - >10 hours) e assim por diante. Eles representam escalas (0 à 5, 1 à 3 ...)
+Age, absences e as notas (G1, G2 e G3) estão em escalas maiores.
+
+
+# Outliers e Valores ausentes
+Como o dataset é dividido em escalas fixas e bem definidas, é menos provável que existam outliers. Ainda que 'absences' e 'age' tenham uma distribuição de dados assimétrica e com alguns valores bem distantes da mediana, essas informações são consideradas normais ao dataset. Por se tratar de estudantes em diferentes faixas etárias e com variações no número de ausências, esses dados refletem a diversidade esperada dentro de uma população estudantil.
+Além disso, as variações observadas em absences e age são consistentes com a natureza dos dados educacionais, onde fatores como frequência escolar e idade podem variar significativamente entre os indivíduos. Esses valores extremos, ou outliers, não necessariamente indicam erros nos dados, mas sim características inerentes à população estudada.
+
+Portanto, podemos prosseguir com a análise, considerando que a presença de alguns valores extremos em absences e age não compromete a integridade geral do dataset.
+
+
+# Primeiramente, criamos uma cópia do dataset original para preservá-lo. Utilizamos a função np.where para converter variáveis binárias, substituindo valores categóricos por numéricos (por exemplo, 'F' para 1 e 'M' para 0 na coluna 'sex'). Em seguida, aplicamos a técnica de one-hot encoding nas colunas 'Mjob', 'Fjob', 'reason' e 'guardian' utilizando pd.get_dummies, o que cria novas colunas binárias para cada categoria dessas variáveis. Finalmente, removemos a coluna 'school' do dataset, já que não pretendemos fazer comparações entre as duas escolas e essa informação se torna irrelevante para nossa análise.
