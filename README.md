@@ -11,19 +11,21 @@ student-performance-analysis/
 │
 ├── README.md
 ├── data/
-│   ├── student.csv
-│   └── prepare_data.py
+│   ├-- student-mat.csv
+|   |-- student-merge.R
+|   |-- student-por.csv 
+│   └── student.txt
 ├── notebooks/
-│   ├── Descriptive Analysis/
-│   │   ├── 01_Data_Loading_and_Cleaning.ipynb
-│   │   ├── -
-│   │   ├── -
-│   │   ├── -
-│   │   └── -
-│   ├── Predictive Analysis/
-│   │   ├── 01_Feature_Selection.ipynb
-│   │   ├── -
-│   │   └── -
+│   ├── Analysis of merge disciplines/
+│   │   ├── Análise Principal.ipynb
+│   │   ├── Seleção de atributos.ipynb
+│   │   ├── Trabalhando o dataset.ipynb
+│   │   └── d3_trabalhado.csv
+│   ├── D1 (Math)/
+│   │   ├── Descritiptive Analysis/
+│   │   ├── Predictive Analysis/
+│   │   └── d1_trabalhado.csv
+|   ├── D2 (Portuguese)/
+│   │   ├── 
 └── results/
-    ├── figures/
-    └── models/
+    └── Visão inicial do Dataset.txt/
